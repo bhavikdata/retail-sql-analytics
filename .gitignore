@@ -1,0 +1,18 @@
+# Generated data: recreate with `python scripts/generate_data.py`
+data/*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local PostgreSQL environment files (never commit passwords)
+.env
+.pgpass

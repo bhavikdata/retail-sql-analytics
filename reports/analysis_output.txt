@@ -1,0 +1,379 @@
+ order_month | orders | items | gross_sales | discount_amount | refunded_amount | net_sales | prev_month_net_sales | mom_growth_pct | net_sales_3m_avg | cumulative_net_sales 
+-------------+--------+-------+-------------+-----------------+-----------------+-----------+----------------------+----------------+------------------+----------------------
+ 2024-01-01  |     36 |   139 |     2239.51 |          117.42 |          349.11 |   1772.98 |                      |                |          1772.98 |              1772.98
+ 2024-02-01  |     66 |   214 |     3796.57 |          140.19 |          390.90 |   3265.48 |              1772.98 |           84.2 |          2519.23 |              5038.46
+ 2024-03-01  |     97 |   315 |     5652.61 |          366.35 |          728.09 |   4558.17 |              3265.48 |           39.6 |          3198.88 |              9596.63
+ 2024-04-01  |     92 |   321 |     5452.92 |          221.51 |          473.81 |   4757.60 |              4558.17 |            4.4 |          4193.75 |             14354.23
+ 2024-05-01  |    110 |   370 |     6512.65 |          316.20 |          328.88 |   5867.57 |              4757.60 |           23.3 |          5061.11 |             20221.80
+ 2024-06-01  |    110 |   420 |     6540.49 |          321.94 |          503.44 |   5715.11 |              5867.57 |           -2.6 |          5446.76 |             25936.91
+ 2024-07-01  |    110 |   381 |     5593.23 |          237.07 |          379.01 |   4977.15 |              5715.11 |          -12.9 |          5519.94 |             30914.06
+ 2024-08-01  |    118 |   371 |     5781.77 |          338.66 |          495.34 |   4947.77 |              4977.15 |           -0.6 |          5213.34 |             35861.83
+ 2024-09-01  |    121 |   420 |     6195.75 |          354.62 |          294.08 |   5547.05 |              4947.77 |           12.1 |          5157.32 |             41408.88
+ 2024-10-01  |    151 |   532 |     8800.13 |          447.61 |          319.03 |   8033.49 |              5547.05 |           44.8 |          6176.10 |             49442.37
+ 2024-11-01  |    205 |   731 |    13062.91 |         1293.74 |          860.52 |  10908.65 |              8033.49 |           35.8 |          8163.06 |             60351.02
+ 2024-12-01  |    194 |   684 |    10243.44 |          414.97 |          473.21 |   9355.26 |             10908.65 |          -14.2 |          9432.47 |             69706.28
+ 2025-01-01  |    179 |   552 |     9848.62 |          377.44 |          890.64 |   8580.54 |              9355.26 |           -8.3 |          9614.82 |             78286.82
+ 2025-02-01  |    145 |   490 |     8887.23 |          408.86 |          432.67 |   8045.70 |              8580.54 |           -6.2 |          8660.50 |             86332.52
+ 2025-03-01  |    159 |   568 |     9308.59 |          375.84 |         1087.82 |   7844.93 |              8045.70 |           -2.5 |          8157.06 |             94177.45
+ 2025-04-01  |    156 |   512 |     8984.78 |          486.69 |          766.31 |   7731.78 |              7844.93 |           -1.4 |          7874.14 |            101909.23
+ 2025-05-01  |    152 |   490 |     8760.80 |          328.09 |         1134.44 |   7298.27 |              7731.78 |           -5.6 |          7624.99 |            109207.50
+ 2025-06-01  |    106 |   395 |     6118.16 |          290.50 |          830.66 |   4997.00 |              7298.27 |          -31.5 |          6675.68 |            114204.50
+(18 rows)
+
+ order_month | all_orders | completed_orders | cancelled_orders | pending_orders | cancellation_rate_pct 
+-------------+------------+------------------+------------------+----------------+-----------------------
+ 2024-01-01  |         42 |               36 |                6 |              0 |                  14.3
+ 2024-02-01  |         72 |               66 |                6 |              0 |                   8.3
+ 2024-03-01  |        100 |               97 |                3 |              0 |                   3.0
+ 2024-04-01  |         98 |               92 |                6 |              0 |                   6.1
+ 2024-05-01  |        114 |              110 |                4 |              0 |                   3.5
+ 2024-06-01  |        125 |              111 |               14 |              0 |                  11.2
+ 2024-07-01  |        119 |              110 |                9 |              0 |                   7.6
+ 2024-08-01  |        128 |              119 |                9 |              0 |                   7.0
+ 2024-09-01  |        129 |              121 |                8 |              0 |                   6.2
+ 2024-10-01  |        160 |              151 |                9 |              0 |                   5.6
+ 2024-11-01  |        216 |              206 |               10 |              0 |                   4.6
+ 2024-12-01  |        210 |              194 |               16 |              0 |                   7.6
+ 2025-01-01  |        185 |              179 |                6 |              0 |                   3.2
+ 2025-02-01  |        155 |              145 |               10 |              0 |                   6.5
+ 2025-03-01  |        168 |              159 |                9 |              0 |                   5.4
+ 2025-04-01  |        163 |              156 |                7 |              0 |                   4.3
+ 2025-05-01  |        164 |              152 |               12 |              0 |                   7.3
+ 2025-06-01  |        119 |              106 |                3 |             10 |                   2.5
+(18 rows)
+
+ order_month | orders_new_customers | orders_returning_customers | net_sales_new_customers | net_sales_returning_customers 
+-------------+----------------------+----------------------------+-------------------------+-------------------------------
+ 2024-01-01  |                   36 |                          0 |                 1772.98 |                             0
+ 2024-02-01  |                   59 |                          7 |                 2922.02 |                        343.46
+ 2024-03-01  |                   67 |                         30 |                 3329.70 |                       1228.47
+ 2024-04-01  |                   57 |                         35 |                 2635.75 |                       2121.85
+ 2024-05-01  |                   55 |                         55 |                 2551.30 |                       3316.27
+ 2024-06-01  |                   61 |                         49 |                 3030.78 |                       2684.33
+ 2024-07-01  |                   54 |                         56 |                 1965.58 |                       3011.57
+ 2024-08-01  |                   49 |                         69 |                 2313.82 |                       2633.95
+ 2024-09-01  |                   54 |                         67 |                 2412.35 |                       3134.70
+ 2024-10-01  |                   66 |                         85 |                 2950.02 |                       5083.47
+ 2024-11-01  |                   85 |                        120 |                 5297.98 |                       5610.67
+ 2024-12-01  |                   71 |                        123 |                 3642.97 |                       5712.29
+ 2025-01-01  |                   66 |                        113 |                 3723.07 |                       4857.47
+ 2025-02-01  |                   54 |                         91 |                 3050.60 |                       4995.10
+ 2025-03-01  |                   58 |                        101 |                 2844.56 |                       5000.37
+ 2025-04-01  |                   66 |                         90 |                 3388.90 |                       4342.88
+ 2025-05-01  |                   70 |                         82 |                 3335.51 |                       3962.76
+ 2025-06-01  |                   19 |                         87 |                  849.32 |                       4147.68
+(18 rows)
+
+        category         | orders_containing_category | units_sold | gross_sales | discount_amount | refunded_amount | net_sales | net_sales_share_pct | units_share_pct | net_sales_rank 
+-------------------------+----------------------------+------------+-------------+-----------------+-----------------+-----------+---------------------+-----------------+----------------
+ home_cleaning           |                        886 |       1832 |    38510.73 |         2085.13 |         4726.40 |  31699.20 |                27.8 |            23.2 |              1
+ electronics_accessories |                        748 |       1059 |    25524.16 |         1289.03 |         3869.07 |  20366.06 |                17.8 |            13.4 |              2
+ pet_supplies            |                        608 |       1243 |    22260.38 |         1105.66 |          996.11 |  20158.61 |                17.7 |            15.7 |              3
+ kitchen                 |                        553 |        758 |    20590.21 |         1066.91 |          689.23 |  18834.07 |                16.5 |             9.6 |              4
+ stationery              |                        692 |       1452 |    13484.70 |          664.93 |          327.58 |  12492.19 |                10.9 |            18.4 |              5
+ snacks_beverages        |                        754 |       1561 |    11409.98 |          626.04 |          129.57 |  10654.37 |                 9.3 |            19.7 |              6
+(6 rows)
+
+        category         | rank_in_category |       product_name       | units_sold | net_sales 
+-------------------------+------------------+--------------------------+------------+-----------
+ electronics_accessories |                1 | Wireless Earbuds         |        184 |   6146.21
+ electronics_accessories |                2 | Wireless Mouse           |        188 |   3041.13
+ electronics_accessories |                3 | Laptop Sleeve 14in       |        135 |   2384.75
+ home_cleaning           |                1 | Cordless Handheld Vacuum |        285 |  17626.37
+ home_cleaning           |                2 | Spin Mop and Bucket      |        189 |   4819.21
+ home_cleaning           |                3 | Dishwasher Tablets x60   |        249 |   2663.94
+ kitchen                 |                1 | Chef Knife 20cm          |        157 |   4981.00
+ kitchen                 |                2 | Electric Kettle 1.7L     |        178 |   4919.79
+ kitchen                 |                3 | Stainless Saucepan Set   |         50 |   2612.54
+ pet_supplies            |                1 | Pet Bed Medium           |        208 |   5619.20
+ pet_supplies            |                2 | Dog Lead and Collar Set  |        276 |   4199.71
+ pet_supplies            |                3 | Dry Dog Food 5kg         |        117 |   2717.72
+ snacks_beverages        |                1 | Ground Coffee 1kg        |        207 |   2896.77
+ snacks_beverages        |                2 | Mixed Nuts 500g          |        253 |   1821.63
+ snacks_beverages        |                3 | Loose Leaf Tea 250g      |        248 |   1562.87
+ stationery              |                1 | Desk Organiser           |        163 |   2703.23
+ stationery              |                2 | Weekly Desk Planner      |        229 |   2659.97
+ stationery              |                3 | Ring Binder Set          |        213 |   2014.11
+(18 rows)
+
+ overall_rank |       product_name        |        category         | net_sales | cumulative_share_pct 
+--------------+---------------------------+-------------------------+-----------+----------------------
+            1 | Cordless Handheld Vacuum  | home_cleaning           |  17626.37 |                 15.4
+            2 | Wireless Earbuds          | electronics_accessories |   6146.21 |                 20.8
+            3 | Pet Bed Medium            | pet_supplies            |   5619.20 |                 25.7
+            4 | Chef Knife 20cm           | kitchen                 |   4981.00 |                 30.1
+            5 | Electric Kettle 1.7L      | kitchen                 |   4919.79 |                 34.4
+            6 | Spin Mop and Bucket       | home_cleaning           |   4819.21 |                 38.6
+            7 | Dog Lead and Collar Set   | pet_supplies            |   4199.71 |                 42.3
+            8 | Wireless Mouse            | electronics_accessories |   3041.13 |                 45.0
+            9 | Ground Coffee 1kg         | snacks_beverages        |   2896.77 |                 47.5
+           10 | Dry Dog Food 5kg          | pet_supplies            |   2717.72 |                 49.9
+           11 | Desk Organiser            | stationery              |   2703.23 |                 52.2
+           12 | Dishwasher Tablets x60    | home_cleaning           |   2663.94 |                 54.6
+           13 | Weekly Desk Planner       | stationery              |   2659.97 |                 56.9
+           14 | Stainless Saucepan Set    | kitchen                 |   2612.54 |                 59.2
+           15 | Cat Scratching Post       | pet_supplies            |   2468.17 |                 61.4
+           16 | Laptop Sleeve 14in        | electronics_accessories |   2384.75 |                 63.4
+           17 | Smart Plug Twin Pack      | electronics_accessories |   2380.57 |                 65.5
+           18 | Cat Litter 10L            | pet_supplies            |   2149.89 |                 67.4
+           19 | Laundry Liquid 2L         | home_cleaning           |   2104.83 |                 69.3
+           20 | Power Bank 10000mAh       | electronics_accessories |   2046.63 |                 71.0
+           21 | Nonstick Frying Pan 28cm  | kitchen                 |   2034.91 |                 72.8
+           22 | Ring Binder Set           | stationery              |   2014.11 |                 74.6
+           23 | Mixed Nuts 500g           | snacks_beverages        |   1821.63 |                 76.2
+           24 | Gel Pen Pack x12          | stationery              |   1798.65 |                 77.8
+           25 | Phone Stand Adjustable    | electronics_accessories |   1783.67 |                 79.3
+           26 | Stainless Pet Bowl Pair   | pet_supplies            |   1709.04 |                 80.8
+           27 | Bin Bags Roll x40         | home_cleaning           |   1598.64 |                 82.2
+           28 | Microfibre Cloth Pack     | home_cleaning           |   1589.54 |                 83.6
+           29 | Bluetooth Speaker Mini    | electronics_accessories |   1580.15 |                 85.0
+           30 | Loose Leaf Tea 250g       | snacks_beverages        |   1562.87 |                 86.4
+           31 | Bamboo Chopping Board     | kitchen                 |   1438.35 |                 87.6
+           32 | Sparkling Water 12 Pack   | snacks_beverages        |   1435.58 |                 88.9
+           33 | Sticky Notes Bundle       | stationery              |   1415.84 |                 90.1
+           34 | A5 Hardback Notebook      | stationery              |   1392.94 |                 91.3
+           35 | Glass Food Storage Set    | kitchen                 |   1391.50 |                 92.6
+           36 | Granola 750g              | snacks_beverages        |   1329.23 |                 93.7
+           37 | Chew Toy Bundle           | pet_supplies            |   1294.88 |                 94.9
+           38 | Dark Chocolate Bar Pack   | snacks_beverages        |   1010.65 |                 95.7
+           39 | USB-C Charging Cable 2m   | electronics_accessories |   1002.95 |                 96.6
+           40 | Multi-Surface Spray 750ml | home_cleaning           |    866.92 |                 97.4
+           41 | Silicone Utensil Set      | kitchen                 |    730.54 |                 98.0
+           42 | Insulated Travel Mug      | kitchen                 |    725.44 |                 98.7
+           43 | Oat Biscuits Multipack    | snacks_beverages        |    597.64 |                 99.2
+           44 | Highlighter Set x6        | stationery              |    507.45 |                 99.6
+           45 | Scrubbing Sponges x10     | home_cleaning           |    429.75 |                100.0
+(45 rows)
+
+ order_month | orders | avg_order_value | median_order_value | avg_net_order_value | avg_items_per_order 
+-------------+--------+-----------------+--------------------+---------------------+---------------------
+ 2024-01-01  |     36 |           58.95 |              40.96 |               49.25 |                3.86
+ 2024-02-01  |     66 |           55.40 |              44.88 |               49.48 |                3.24
+ 2024-03-01  |     97 |           54.50 |              35.97 |               46.99 |                3.25
+ 2024-04-01  |     92 |           56.86 |              39.99 |               51.71 |                3.49
+ 2024-05-01  |    110 |           56.33 |              38.24 |               53.34 |                3.36
+ 2024-06-01  |    110 |           56.53 |              40.95 |               51.96 |                3.82
+ 2024-07-01  |    110 |           48.69 |              36.86 |               45.25 |                3.46
+ 2024-08-01  |    118 |           46.13 |              34.47 |               41.93 |                3.14
+ 2024-09-01  |    121 |           48.27 |              37.50 |               45.84 |                3.47
+ 2024-10-01  |    151 |           55.31 |              40.46 |               53.20 |                3.52
+ 2024-11-01  |    205 |           57.41 |              35.98 |               53.21 |                3.57
+ 2024-12-01  |    194 |           50.66 |              39.98 |               48.22 |                3.53
+ 2025-01-01  |    179 |           52.91 |              38.95 |               47.94 |                3.08
+ 2025-02-01  |    145 |           58.47 |              38.99 |               55.49 |                3.38
+ 2025-03-01  |    159 |           56.18 |              41.97 |               49.34 |                3.57
+ 2025-04-01  |    156 |           54.47 |              39.57 |               49.56 |                3.28
+ 2025-05-01  |    152 |           55.48 |              35.62 |               48.01 |                3.22
+ 2025-06-01  |    106 |           54.98 |              44.16 |               47.14 |                3.73
+(18 rows)
+
+        category         | orders_with_category | avg_category_spend_per_order | avg_full_basket_value 
+-------------------------+----------------------+------------------------------+-----------------------
+ kitchen                 |                  553 |                        35.30 |                 72.54
+ home_cleaning           |                  886 |                        41.11 |                 71.62
+ pet_supplies            |                  608 |                        34.79 |                 69.77
+ electronics_accessories |                  748 |                        32.40 |                 68.51
+ stationery              |                  692 |                        18.53 |                 59.62
+ snacks_beverages        |                  754 |                        14.30 |                 57.65
+(6 rows)
+
+ customer_segment | purchasing_customers | repeat_customers | repeat_rate_pct | avg_orders_per_customer 
+------------------+----------------------+------------------+-----------------+-------------------------
+ budget           |                  352 |              186 |            52.8 |                    2.18
+ mainstream       |                  419 |              277 |            66.1 |                    2.70
+ premium          |                  113 |               85 |            75.2 |                    3.61
+ all_customers    |                  884 |              548 |            62.0 |                    2.61
+(4 rows)
+
+ eligible_customers | repeat_within_90_days | repeat_within_90_days_pct | avg_days_to_second_order_all_repeaters 
+--------------------+-----------------------+---------------------------+----------------------------------------
+                750 |                   428 |                      57.1 |                                   44.1
+(1 row)
+
+ cohort_month | cohort_customers | m1_pct | m2_pct | m3_pct | m6_pct | m12_pct 
+--------------+------------------+--------+--------+--------+--------+---------
+ 2024-01-01   |               34 |   20.6 |   14.7 |    8.8 |    2.9 |     0.0
+ 2024-02-01   |               49 |   30.6 |   16.3 |   18.4 |   12.2 |     4.1
+ 2024-03-01   |               56 |   30.4 |   23.2 |    8.9 |   16.1 |     0.0
+ 2024-04-01   |               49 |   24.5 |   28.6 |   14.3 |   10.2 |     2.0
+ 2024-05-01   |               50 |   28.0 |   16.0 |   18.0 |   10.0 |     4.0
+ 2024-06-01   |               52 |   30.8 |   23.1 |   23.1 |   17.3 |     5.8
+ 2024-07-01   |               49 |   24.5 |   26.5 |   16.3 |   24.5 |        
+ 2024-08-01   |               43 |   23.3 |   16.3 |   30.2 |    4.7 |        
+ 2024-09-01   |               45 |   44.4 |   37.8 |   17.8 |    6.7 |        
+ 2024-10-01   |               52 |   34.6 |   40.4 |   25.0 |    5.8 |        
+ 2024-11-01   |               66 |   37.9 |   28.8 |   18.2 |    9.1 |        
+ 2024-12-01   |               56 |   37.5 |   21.4 |   21.4 |    7.1 |        
+ 2025-01-01   |               54 |   31.5 |   20.4 |   16.7 |        |        
+ 2025-02-01   |               47 |   25.5 |   23.4 |   25.5 |        |        
+ 2025-03-01   |               46 |   32.6 |   19.6 |   13.0 |        |        
+ 2025-04-01   |               56 |   30.4 |   19.6 |        |        |        
+ 2025-05-01   |               64 |   31.3 |        |        |        |        
+ 2025-06-01   |               16 |        |        |        |        |        
+(18 rows)
+
+     rfm_segment      | customers | customer_share_pct | avg_recency_days | avg_orders | avg_net_sales | total_net_sales | net_sales_share_pct 
+----------------------+-----------+--------------------+------------------+------------+---------------+-----------------+---------------------
+ champions            |       112 |               12.7 |               60 |       5.91 |        279.15 |        31265.18 |                27.4
+ loyal                |       140 |               15.8 |              138 |       4.02 |        219.83 |        30776.68 |                26.9
+ hibernating          |       272 |               30.8 |              379 |       1.35 |         63.73 |        17334.93 |                15.2
+ at_risk              |        82 |                9.3 |              336 |       3.88 |        185.45 |        15207.16 |                13.3
+ recent_low_frequency |       187 |               21.2 |               61 |       1.43 |         70.83 |        13244.73 |                11.6
+ needs_attention      |        91 |               10.3 |              185 |       1.43 |         70.06 |         6375.82 |                 5.6
+(6 rows)
+
+    dimension     | dimension_value  | customers | avg_r_score | avg_f_score | avg_m_score | avg_net_sales 
+------------------+------------------+-----------+-------------+-------------+-------------+---------------
+ customer_segment | premium          |       113 |        3.28 |        2.88 |        3.63 |        194.18
+ customer_segment | mainstream       |       419 |        3.02 |        2.41 |        3.05 |        130.23
+ customer_segment | budget           |       352 |        2.88 |        2.05 |        2.73 |        107.09
+ region           | Unknown          |         5 |        3.00 |        2.40 |        4.40 |        279.03
+ region           | South West       |        76 |        2.89 |        2.47 |        3.25 |        155.14
+ region           | Northern Ireland |        22 |        2.50 |        2.55 |        3.05 |        151.70
+ region           | North West       |       116 |        3.14 |        2.36 |        3.12 |        135.29
+ region           | Yorkshire        |        82 |        3.13 |        2.33 |        3.02 |        134.36
+ region           | Scotland         |        96 |        3.04 |        2.28 |        3.00 |        128.03
+ region           | Midlands         |       128 |        2.84 |        2.20 |        2.98 |        126.19
+ region           | London           |       183 |        3.06 |        2.42 |        2.98 |        120.70
+ region           | South East       |       131 |        2.91 |        2.22 |        2.82 |        116.52
+ region           | Wales            |        45 |        3.18 |        2.18 |        2.69 |        114.98
+(13 rows)
+
+ order_type | orders | avg_gross_value | avg_checkout_value | avg_items | avg_lines | total_discount | total_net_sales | refund_rate_pct 
+------------+--------+-----------------+--------------------+-----------+-----------+----------------+-----------------+-----------------
+ discounted |    721 |           61.99 |              52.50 |      3.65 |      2.20 |        6837.70 |        34370.03 |            9.21
+ full_price |   1586 |           54.91 |              54.91 |      3.32 |      2.01 |           0.00 |        79834.47 |            8.33
+(2 rows)
+
+   discount_band   | orders | avg_gross_value | avg_checkout_value | avg_net_value | total_net_sales 
+-------------------+--------+-----------------+--------------------+---------------+-----------------
+ 0: none           |   1586 |           54.91 |              54.91 |         50.34 |        79834.47
+ 1: under 12.5%    |    215 |           61.37 |              55.23 |         51.70 |        11115.33
+ 2: 12.5% to 17.5% |    249 |           62.91 |              53.48 |         47.23 |        11760.97
+ 3: 17.5% or more  |    257 |           61.60 |              49.28 |         44.72 |        11493.73
+(4 rows)
+
+ customer_segment | avg_checkout_discounted | avg_checkout_full_price | discounted_orders | full_price_orders 
+------------------+-------------------------+-------------------------+-------------------+-------------------
+ budget           |                   50.57 |                   56.71 |               327 |               441
+ mainstream       |                   54.40 |                   51.99 |               333 |               798
+ premium          |                   52.52 |                   59.35 |                61 |               347
+(3 rows)
+
+ months | corr_discount_share_net_sales | corr_discount_share_orders 
+--------+-------------------------------+----------------------------
+     18 |                         0.292 |                      0.256
+(1 row)
+
+       product_name        |        category         | units_sold | units_returned | return_rate_pct | overall_return_rate_pct | checkout_value | refunded_amount | net_sales | sales_percentile |           flag           
+---------------------------+-------------------------+------------+----------------+-----------------+-------------------------+----------------+-----------------+-----------+------------------+--------------------------
+ Wireless Earbuds          | electronics_accessories |        184 |             60 |            32.6 |                     4.8 |        8673.17 |         2526.96 |   6146.21 |               98 | high sales, high returns
+ Cordless Handheld Vacuum  | home_cleaning           |        285 |             60 |            21.1 |                     4.8 |       21924.84 |         4298.47 |  17626.37 |              100 | high sales, high returns
+ Smart Plug Twin Pack      | electronics_accessories |        128 |             21 |            16.4 |                     4.8 |        2823.12 |          442.55 |   2380.57 |               75 | high sales, high returns
+ Insulated Travel Mug      | kitchen                 |         63 |              8 |            12.7 |                     4.8 |         799.35 |           73.91 |    725.44 |                9 | 
+ Pet Bed Medium            | pet_supplies            |        208 |             22 |            10.6 |                     4.8 |        6267.20 |          648.00 |   5619.20 |               95 | high sales, high returns
+ Power Bank 10000mAh       | electronics_accessories |         97 |             10 |            10.3 |                     4.8 |        2282.78 |          236.15 |   2046.63 |               61 | high sales, high returns
+ Stainless Saucepan Set    | kitchen                 |         50 |              4 |             8.0 |                     4.8 |        2831.50 |          218.96 |   2612.54 |               77 | high sales, high returns
+ USB-C Charging Cable 2m   | electronics_accessories |        114 |              9 |             7.9 |                     4.8 |        1087.36 |           84.41 |   1002.95 |               16 | 
+ Phone Stand Adjustable    | electronics_accessories |        165 |             13 |             7.9 |                     4.8 |        1938.13 |          154.46 |   1783.67 |               50 | high sales, high returns
+ Laptop Sleeve 14in        | electronics_accessories |        135 |             10 |             7.4 |                     4.8 |        2575.65 |          190.90 |   2384.75 |               64 | high sales, high returns
+ Scrubbing Sponges x10     | home_cleaning           |        110 |              8 |             7.3 |                     4.8 |         455.49 |           25.74 |    429.75 |                0 | 
+ Desk Organiser            | stationery              |        163 |             10 |             6.1 |                     4.8 |        2847.23 |          144.00 |   2703.23 |               80 | 
+ Wireless Mouse            | electronics_accessories |        188 |             11 |             5.9 |                     4.8 |        3203.04 |          161.91 |   3041.13 |               84 | 
+ Glass Food Storage Set    | kitchen                 |         70 |              4 |             5.7 |                     4.8 |        1472.90 |           81.40 |   1391.50 |               32 | 
+ Bin Bags Roll x40         | home_cleaning           |        297 |             16 |             5.4 |                     4.8 |        1683.69 |           85.05 |   1598.64 |               41 | 
+ Cat Scratching Post       | pet_supplies            |         97 |              5 |             5.2 |                     4.8 |        2592.32 |          124.15 |   2468.17 |               66 | 
+ Spin Mop and Bucket       | home_cleaning           |        189 |              9 |             4.8 |                     4.8 |        5005.95 |          186.74 |   4819.21 |               89 | 
+ Bluetooth Speaker Mini    | electronics_accessories |         48 |              2 |             4.2 |                     4.8 |        1651.88 |           71.73 |   1580.15 |               39 | 
+ Loose Leaf Tea 250g       | snacks_beverages        |        248 |             10 |             4.0 |                     4.8 |        1629.97 |           67.10 |   1562.87 |               34 | 
+ Sticky Notes Bundle       | stationery              |        279 |             11 |             3.9 |                     4.8 |        1468.00 |           52.16 |   1415.84 |               30 | 
+ Electric Kettle 1.7L      | kitchen                 |        178 |              7 |             3.9 |                     4.8 |        5116.22 |          196.43 |   4919.79 |               93 | 
+ Cat Litter 10L            | pet_supplies            |        261 |             10 |             3.8 |                     4.8 |        2213.27 |           63.38 |   2149.89 |               59 | 
+ Microfibre Cloth Pack     | home_cleaning           |        213 |              8 |             3.8 |                     4.8 |        1645.47 |           55.93 |   1589.54 |               36 | 
+ Dry Dog Food 5kg          | pet_supplies            |        117 |              4 |             3.4 |                     4.8 |        2821.43 |          103.71 |   2717.72 |               73 | 
+ Ring Binder Set           | stationery              |        213 |              5 |             2.3 |                     4.8 |        2054.57 |           40.46 |   2014.11 |               52 | 
+ Stainless Pet Bowl Pair   | pet_supplies            |        171 |              4 |             2.3 |                     4.8 |        1751.52 |           42.48 |   1709.04 |               43 | 
+ Multi-Surface Spray 750ml | home_cleaning           |        268 |              6 |             2.2 |                     4.8 |         887.16 |           20.24 |    866.92 |               11 | 
+ Weekly Desk Planner       | stationery              |        229 |              5 |             2.2 |                     4.8 |        2722.47 |           62.50 |   2659.97 |               70 | 
+ Silicone Utensil Set      | kitchen                 |         47 |              1 |             2.1 |                     4.8 |         744.98 |           14.44 |    730.54 |                7 | 
+ Dishwasher Tablets x60    | home_cleaning           |        249 |              5 |             2.0 |                     4.8 |        2708.18 |           44.24 |   2663.94 |               68 | 
+ Bamboo Chopping Board     | kitchen                 |        107 |              2 |             1.9 |                     4.8 |        1452.85 |           14.50 |   1438.35 |               27 | 
+ Gel Pen Pack x12          | stationery              |        297 |              4 |             1.3 |                     4.8 |        1818.12 |           19.47 |   1798.65 |               45 | 
+ Chef Knife 20cm           | kitchen                 |        157 |              2 |             1.3 |                     4.8 |        5045.60 |           64.60 |   4981.00 |               91 | 
+ Nonstick Frying Pan 28cm  | kitchen                 |         86 |              1 |             1.2 |                     4.8 |        2059.90 |           24.99 |   2034.91 |               55 | 
+ Dog Lead and Collar Set   | pet_supplies            |        276 |              3 |             1.1 |                     4.8 |        4214.10 |           14.39 |   4199.71 |               86 | 
+ Granola 750g              | snacks_beverages        |        285 |              3 |             1.1 |                     4.8 |        1344.20 |           14.97 |   1329.23 |               20 | 
+ Ground Coffee 1kg         | snacks_beverages        |        207 |              2 |             1.0 |                     4.8 |        2924.50 |           27.73 |   2896.77 |               82 | 
+ Highlighter Set x6        | stationery              |        106 |              1 |             0.9 |                     4.8 |         507.45 |               0 |    507.45 |                2 | 
+ Mixed Nuts 500g           | snacks_beverages        |        253 |              2 |             0.8 |                     4.8 |        1835.11 |           13.48 |   1821.63 |               48 | 
+ Oat Biscuits Multipack    | snacks_beverages        |        158 |              1 |             0.6 |                     4.8 |         597.64 |               0 |    597.64 |                5 | 
+ A5 Hardback Notebook      | stationery              |        165 |              1 |             0.6 |                     4.8 |        1401.93 |            8.99 |   1392.94 |               23 | 
+ Dark Chocolate Bar Pack   | snacks_beverages        |        178 |              1 |             0.6 |                     4.8 |        1016.94 |            6.29 |   1010.65 |               14 | 
+ Laundry Liquid 2L         | home_cleaning           |        221 |              1 |             0.5 |                     4.8 |        2114.82 |            9.99 |   2104.83 |               57 | 
+ Sparkling Water 12 Pack   | snacks_beverages        |        232 |              1 |             0.4 |                     4.8 |        1435.58 |               0 |   1435.58 |               25 | 
+ Chew Toy Bundle           | pet_supplies            |        113 |              0 |             0.0 |                     4.8 |        1294.88 |               0 |   1294.88 |               18 | 
+(45 rows)
+
+        category         |  return_reason   | return_requests | units_requested | refunded_amount | share_of_category_returns_pct 
+-------------------------+------------------+-----------------+-----------------+-----------------+-------------------------------
+ electronics_accessories | changed_mind     |              45 |              51 |         1239.42 |                          39.1
+ electronics_accessories | not_as_described |              35 |              42 |         1315.54 |                          30.4
+ electronics_accessories | damaged          |              20 |              24 |          759.57 |                          17.4
+ electronics_accessories | wrong_item       |              15 |              20 |          604.53 |                          13.0
+ home_cleaning           | not_as_described |              28 |              39 |         2181.57 |                          33.7
+ home_cleaning           | damaged          |              21 |              26 |         1015.03 |                          25.3
+ home_cleaning           | changed_mind     |              21 |              26 |          871.60 |                          25.3
+ home_cleaning           | wrong_item       |              13 |              22 |          658.20 |                          15.7
+ kitchen                 | changed_mind     |               8 |               8 |          145.59 |                          28.6
+ kitchen                 | damaged          |               8 |               9 |          200.21 |                          28.6
+ kitchen                 | not_as_described |               7 |               8 |          247.35 |                          25.0
+ kitchen                 | wrong_item       |               5 |               5 |          121.07 |                          17.9
+ pet_supplies            | changed_mind     |              16 |              20 |          392.15 |                          43.2
+ pet_supplies            | not_as_described |              11 |              13 |          259.22 |                          29.7
+ pet_supplies            | damaged          |               7 |              12 |          274.15 |                          18.9
+ pet_supplies            | wrong_item       |               3 |               4 |           84.98 |                           8.1
+ snacks_beverages        | changed_mind     |               7 |               9 |           52.27 |                          41.2
+ snacks_beverages        | wrong_item       |               5 |               5 |           44.60 |                          29.4
+ snacks_beverages        | damaged          |               4 |               5 |           25.71 |                          23.5
+ snacks_beverages        | not_as_described |               1 |               1 |            6.99 |                           5.9
+ stationery              | changed_mind     |              10 |              16 |          186.64 |                          37.0
+ stationery              | not_as_described |               9 |              10 |           63.58 |                          33.3
+ stationery              | wrong_item       |               6 |               9 |           60.38 |                          22.2
+ stationery              | damaged          |               2 |               2 |           16.98 |                           7.4
+(24 rows)
+
+    dimension     | dimension_value  | orders | customers | net_sales | avg_order_value | order_share_pct | net_sales_share_pct 
+------------------+------------------+--------+-----------+-----------+-----------------+-----------------+---------------------
+ customer_segment | mainstream       |   1131 |       419 |  54565.93 |           52.70 |            49.0 |                47.8
+ customer_segment | budget           |    768 |       352 |  37696.01 |           54.10 |            33.3 |                33.0
+ customer_segment | premium          |    408 |       113 |  21942.56 |           58.33 |            17.7 |                19.2
+ region           | London           |    492 |       183 |  22087.77 |           49.30 |            21.3 |                19.3
+ region           | Midlands         |    307 |       128 |  16151.82 |           58.62 |            13.3 |                14.1
+ region           | North West       |    314 |       116 |  15693.97 |           55.88 |            13.6 |                13.7
+ region           | South East       |    326 |       131 |  15264.20 |           50.43 |            14.1 |                13.4
+ region           | Scotland         |    241 |        96 |  12291.28 |           54.84 |            10.4 |                10.8
+ region           | South West       |    218 |        76 |  11790.87 |           58.92 |             9.4 |                10.3
+ region           | Yorkshire        |    216 |        82 |  11017.78 |           55.33 |             9.4 |                 9.6
+ region           | Wales            |    105 |        45 |   5174.20 |           53.01 |             4.6 |                 4.5
+ region           | Northern Ireland |     69 |        22 |   3337.47 |           52.61 |             3.0 |                 2.9
+ region           | Unknown          |     19 |         5 |   1395.14 |           78.68 |             0.8 |                 1.2
+ sales_channel    | web              |   1112 |       549 |  54790.17 |           53.69 |            48.2 |                48.0
+ sales_channel    | mobile_app       |    850 |       414 |  43927.93 |           56.45 |            36.8 |                38.5
+ sales_channel    | marketplace      |    345 |       204 |  15486.40 |           50.02 |            15.0 |                13.6
+(16 rows)
+
+ sales_channel |  budget  | mainstream | premium  |  total   
+---------------+----------+------------+----------+----------
+ web           | 16878.80 |   26744.03 | 11167.34 | 54790.17
+ mobile_app    | 15903.49 |   18894.44 |  9130.00 | 43927.93
+ marketplace   |  4913.72 |    8927.46 |  1645.22 | 15486.40
+(3 rows)
+
+                             issue                              | records | value_gbp | pct_of_net_sales 
+----------------------------------------------------------------+---------+-----------+------------------
+ completed orders with no captured payment (kept in sales)      |       4 |     91.06 |             0.08
+ refund amount above line value (excess removed by cap)         |       3 |     89.37 |             0.08
+ net sales from customers with unknown region                   |      19 |   1395.14 |             1.22
+ captured payments on completed orders with no lines (excluded) |       3 |    285.69 |             0.25
+(4 rows)
+
